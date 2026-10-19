@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <title>Admin · Lily Rose Apartment</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23101828'/%3E%3Cpath d='M8 26V12l8-6 8 6v14h-6v-7h-4v7z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div id="demo-banner" class="demo-banner" hidden>Preview mode: sample data only, nothing is saved.</div>
+
+  <!-- Sign-in -->
+  <main id="signin" class="signin" hidden>
+    <div class="card signin-card">
+      <span class="brand-mark">LR</span>
+      <h1>Management Admin</h1>
+      <p class="muted"><span data-building>Lily Rose Apartment</span></p>
+      <p>Sign in with your authorised Google account.</p>
+      <div id="gsi-button" class="gsi"></div>
+      <div id="demo-signin" class="demo-signin" hidden>
+        <button type="button" class="btn btn-primary" data-demo-role="MO">Preview as MO</button>
+        <button type="button" class="btn btn-ghost" data-demo-role="MC">Preview as MC</button>
+      </div>
+      <div class="alert alert-error" id="signin-error" hidden></div>
+      <p class="muted small">For management office staff and committee members only.</p>
+    </div>
+  </main>
+
+  <!-- App -->
+  <div id="app" hidden>
+    <header class="topbar">
+      <div class="wrap topbar-inner">
+        <a class="brand" href="#overview">
+          <span class="brand-mark">LR</span>
+          <span>
+            <span class="brand-name" data-building>Lily Rose Apartment</span>
+            <span class="brand-sub">Management Admin</span>
+          </span>
+        </a>
+        <nav class="tabs" id="tabs">
+          <a href="#overview" data-tab="overview">Overview</a>
+          <a href="#cases" data-tab="cases">Cases</a>
+          <a href="#residents" data-tab="residents">Residents</a>
+        </nav>
+        <div class="me">
+          <span class="me-name" id="me-name"></span>
+          <span class="role" id="me-role"></span>
+          <button type="button" class="btn btn-ghost btn-sm" id="signout">Sign out</button>
+        </div>
+      </div>
+    </header>
+    <main class="wrap main" id="view"></main>
+  </div>
+
+  <div class="toast" id="toast" role="status" hidden></div>
+
+  <script src="config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
